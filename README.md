@@ -1,7 +1,6 @@
------------------------------------------------------------------------------------------------------
 # Implementação de uma Árvore Morse
 
-### Classe Node
+## Classe Node
 Começamos definindo os nodes na classe `Node`, que são:
 - `char caractere`
 - `Node filhoEsquerdo`
@@ -12,88 +11,90 @@ No construtor, definimos os valores iniciais:
 this.caractere = '\0';
 this.filhoEsquerdo = null;
 this.filhoDireito = null;
+```
 
+---
 
------------------------------------------------------------------------------------------------------
+## Classe ArvoreMorse
+Na classe `ArvoreMorse`, definimos um Node chamado `raiz`.
 
-Classe ArvoreMorse
-Na classe ArvoreMorse, definimos um Node chamado raiz.
+### Método Inserir
+O método `inserir` recebe uma `String` (codigoMorse) e um `char` (caractere).
 
-Método Inserir
-O método inserir recebe uma String (codigoMorse) e um char (caractere).
+1. Inicia o nó raiz como o atual.
+2. Criamos um laço `for` que percorre cada `char` do código morse e verifica:
+   - Se for igual a `'.'`:
+     - Percorre para o nó da esquerda.
+     - Se o nó da esquerda não existir, ele cria um nó novo e o define como o nó atual.
+   - Se for igual a `'-'`:
+     - Percorre para o nó da direita.
+     - Se o nó da direita não existir, ele cria um nó novo e o define como o nó atual.
+3. Ao final da sequência do código morse, atribui o caractere ao nó correspondente.
 
-  1. Inicia o nó raiz como o atual.
-  2. Criamos um laço for que percorre cada char do código morse e verifica:
-    * Se for igual a '.':
-      * Percorre para o nó da esquerda.
-      * Se o nó da esquerda não existir, ele cria um nó novo e o define como o nó atual.
-    * Se for igual a '-':
-      * Percorre para o nó da direita.
-      * Se o nó da direita não existir, ele cria um nó novo e o define como o nó atual.
-  3. Ao final da sequência do código morse, atribui o caractere ao nó correspondente.
+### Método Buscar
+O método `buscar` recebe uma `String` (codigoMorse).
 
-------------------------------------------- Metodo Buscar --------------------------------------------
-Fazemos um metodo de busca onde ele recebe uma String (codigoMorse)
-Inicia o nó raiz como o atual
-Criamos um laço for que verifica cada Char do codigo morse e verifica:
-Se for igual a '.' 
-  Define o noAtual como o nó da esquerda
-Se for igual a '-' percorre para o nó da direita 
-  Define o noAtual como o nó da direita
-Ao final ele verifica se o noAtual for igual a null ele retorna '\0'
-Se não for ele retorna o caractere correspondente ao noAtual
+1. Inicia o nó raiz como o atual.
+2. Criamos um laço `for` que percorre cada `char` do código morse e verifica:
+   - Se for igual a `'.'`:
+     - Define `noAtual` como o nó da esquerda.
+   - Se for igual a `'-'`:
+     - Define `noAtual` como o nó da direita.
+3. Ao final:
+   - Se `noAtual` for igual a `null`, retorna `'\0'`.
+   - Caso contrário, retorna o caractere correspondente ao `noAtual`.
 
---------------------------------------------- Pre Ordem ---------------------------------------------
-O método começa processando o nó atual e imprime o caractere associado a ele
-Em seguida se move para o filho da esquerda se existir 
-Após o filho esquerdo o método se move para o filho direito se existir
+---
 
---------------------------------------------- In Ordem ----------------------------------------------
-Primeiro o método visita o filho da esquerda
-Em seguida processa o nó atual e imprime o caractere associado a ele
-Por último ele se move para o filho da direita se existir
+## Métodos de Percurso
 
---------------------------------------------- Pos Ordem ---------------------------------------------
-O método primeiro visita o filho da esquerda
-Depois se move para o filho da direita
-Por fim processa o nó e imprime o caractere associado a ele
+### Pré-Ordem
+O método começa processando o nó atual e imprime o caractere associado a ele. Em seguida:
+1. Move-se para o filho da esquerda, se existir.
+2. Após o filho esquerdo, move-se para o filho direito, se existir.
 
------------------------------------------------------------------------------------------------------
+### In-Ordem
+1. Primeiro, o método visita o filho da esquerda, se existir.
+2. Em seguida, processa o nó atual e imprime o caractere associado a ele.
+3. Por último, move-se para o filho da direita, se existir.
 
-*Na classe Main criamos uma arvore morse chamada arvoreMorse
-Em seguica inserimos todas as letras do alfabeto com os respectivos codigos morses, ex:
-    arvoreMorse.inserir(".-", 'A');
-    arvoreMorse.inserir("-...", 'B');
-    arvoreMorse.inserir("-.-.", 'C');
-    arvoreMorse.inserir("-..", 'D');
-    .
-    .
-    .
-Apos inserir todo o alfabeto temos um menu com 5 diferentes opções:
+### Pós-Ordem
+1. O método primeiro visita o filho da esquerda, se existir.
+2. Depois, move-se para o filho da direita, se existir.
+3. Por fim, processa o nó e imprime o caractere associado a ele.
 
-1) Inserir código morse e caractere:
-  Pede para o usuario digitar um código morse que vai ser salvo na variavel morse;
-  Pede para o usuario digitar um caractere que vai ser salvo na variavel caractere;
-  Em seguida chamamos o método de inserir e passamos com o argumento a varivel morse e caractere.
-  Fazemos o print que o caracter e código morse foram inseridos com sucesso.
-  
-2) Busca a partir do código morse:
-  Pede para o usuario digitar um código morse para a busca que é salvo na variavel codigo;
-  Em seguida usamos o método buscar com a variavel codigo como argumento e salvamos em uma variavel char resultado;
-  Se o resultado é diferente de '\0'
-    Fazemos o print da letra correspondente ao resultado
-  Se não
-    Fazemos o print que o código morse não foi encontrado
-    
-3) Exibir Pre Ordem:
-   Chama o método Pre Ordem presente na classe ArvoreMorse passando a raiz da arvore como argumento
-   
-4) Exibir In Ordem:
-  Chama o método In Ordem presente na classe ArvoreMorse passando a raiz da arvore como argumento
+---
 
-5) Exibir Pos Ordem:
-  Chama o método Pos Ordem presente na classe ArvoreMorse passando a raiz da arvore como argumento
+## Classe Main
 
+Na classe `Main`, criamos uma árvore morse chamada `arvoreMorse`. Em seguida, inserimos todas as letras do alfabeto com seus respectivos códigos Morse, por exemplo:
+```java
+arvoreMorse.inserir(".-", 'A');
+arvoreMorse.inserir("-...", 'B');
+arvoreMorse.inserir("-.-.", 'C');
+arvoreMorse.inserir("-..", 'D');
+// ...
+```
 
+Após inserir todo o alfabeto, temos um menu com 5 diferentes opções:
 
+### 1) Inserir código morse e caractere
+- Pede para o usuário digitar um código morse, que será salvo na variável `morse`.
+- Pede para o usuário digitar um caractere, que será salvo na variável `caractere`.
+- Em seguida, chamamos o método `inserir`, passando as variáveis `morse` e `caractere` como argumentos.
+- Fazemos o print que o caractere e código morse foram inseridos com sucesso.
 
+### 2) Buscar a partir do código morse
+- Pede para o usuário digitar um código morse para a busca, que é salvo na variável `codigo`.
+- Em seguida, usamos o método `buscar` com a variável `codigo` como argumento e salvamos o resultado em uma variável `char resultado`.
+  - Se o resultado for diferente de `'\0'`, imprime a letra correspondente ao resultado.
+  - Caso contrário, imprime que o código morse não foi encontrado.
+
+### 3) Exibir Pré-Ordem
+- Chama o método `preOrdem` presente na classe `ArvoreMorse`, passando a raiz da árvore como argumento.
+
+### 4) Exibir In-Ordem
+- Chama o método `inOrdem` presente na classe `ArvoreMorse`, passando a raiz da árvore como argumento.
+
+### 5) Exibir Pós-Ordem
+- Chama o método `posOrdem` presente na classe `ArvoreMorse`, passando a raiz da árvore como argumento.
