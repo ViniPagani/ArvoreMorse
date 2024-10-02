@@ -14,6 +14,7 @@ this.filhoDireito = null;
 * Na classe ArvoreMorse definimos um Node chamado raiz
 
 ------------------------------------------- Metodo Inserir ------------------------------------------
+
 Fazemos um metodo de inserir onde ele recebe uma String (codigoMorse) e um Char (caractere)
 Inicia o nó raiz como o atual
 Criamos um laço for que verifica cada Char do codigo morse e verifica:
@@ -26,6 +27,7 @@ Se for igual a '-'
 Ao final da sequencia do código morse ele atribui o caractere ao nó correspondente 
 
 ------------------------------------------- Metodo Buscar --------------------------------------------
+
 Fazemos um metodo de busca onde ele recebe uma String (codigoMorse)
 Inicia o nó raiz como o atual
 Criamos um laço for que verifica cada Char do codigo morse e verifica:
@@ -37,16 +39,19 @@ Ao final ele verifica se o noAtual for igual a null ele retorna '\0'
 Se não for ele retorna o caractere correspondente ao noAtual
 
 --------------------------------------------- Pre Ordem ---------------------------------------------
+
 O método começa processando o nó atual e imprime o caractere associado a ele
 Em seguida se move para o filho da esquerda se existir 
 Após o filho esquerdo o método se move para o filho direito se existir
 
 --------------------------------------------- In Ordem ----------------------------------------------
+
 Primeiro o método visita o filho da esquerda
 Em seguida processa o nó atual e imprime o caractere associado a ele
 Por último ele se move para o filho da direita se existir
 
 --------------------------------------------- Pos Ordem ---------------------------------------------
+
 O método primeiro visita o filho da esquerda
 Depois se move para o filho da direita
 Por fim processa o nó e imprime o caractere associado a ele
