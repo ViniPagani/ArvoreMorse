@@ -2,12 +2,17 @@
 * Começamos defindo os nodes na classe Node que são eles:
 
 Char caractere
+
 Node filhoEsquerdo
+
 Node filho Direito
 
 Fazemos o contrutor definindo o valor
+
 this.caractere = '\0';
+
 this.filhoEsquerdo = null;
+
 this.filhoDireito = null;
 
 -----------------------------------------------------------------------------------------------------
