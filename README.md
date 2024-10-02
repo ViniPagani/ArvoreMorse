@@ -22,15 +22,15 @@ Na classe ArvoreMorse, definimos um Node chamado raiz.
 Método Inserir
 O método inserir recebe uma String (codigoMorse) e um char (caractere).
 
-Inicia o nó raiz como o atual.
-Criamos um laço for que percorre cada char do código morse e verifica:
-Se for igual a '.':
-Percorre para o nó da esquerda.
-Se o nó da esquerda não existir, ele cria um nó novo e o define como o nó atual.
-Se for igual a '-':
-Percorre para o nó da direita.
-Se o nó da direita não existir, ele cria um nó novo e o define como o nó atual.
-Ao final da sequência do código morse, atribui o caractere ao nó correspondente.
+  1. Inicia o nó raiz como o atual.
+  2. Criamos um laço for que percorre cada char do código morse e verifica:
+    * Se for igual a '.':
+      * Percorre para o nó da esquerda.
+      * Se o nó da esquerda não existir, ele cria um nó novo e o define como o nó atual.
+    * Se for igual a '-':
+      * Percorre para o nó da direita.
+      * Se o nó da direita não existir, ele cria um nó novo e o define como o nó atual.
+  3. Ao final da sequência do código morse, atribui o caractere ao nó correspondente.
 
 ------------------------------------------- Metodo Buscar --------------------------------------------
 Fazemos um metodo de busca onde ele recebe uma String (codigoMorse)
