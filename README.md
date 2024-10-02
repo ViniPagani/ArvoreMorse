@@ -49,19 +49,19 @@ O método `buscar` recebe uma `String` (codigoMorse).
 ## Métodos de Percurso
 
 ### Pré-Ordem
-O método começa processando o nó atual e imprime o caractere associado a ele. Em seguida:
-1. Move-se para o filho da esquerda, se existir.
-2. Após o filho esquerdo, move-se para o filho direito, se existir.
+1. O método começa processando o nó atual e imprime o caractere associado a ele
+2. Em seguida se move para o filho da esquerda se existir
+3. Após o filho esquerdo o método se move para o filho direito se existir
 
 ### In-Ordem
-1. Primeiro, o método visita o filho da esquerda, se existir.
-2. Em seguida, processa o nó atual e imprime o caractere associado a ele.
-3. Por último, move-se para o filho da direita, se existir.
+1. Primeiro o método visita o filho da esquerda
+2. Em seguida processa o nó atual e imprime o caractere associado a ele
+3. Por último ele se move para o filho da direita se existir
 
 ### Pós-Ordem
-1. O método primeiro visita o filho da esquerda, se existir.
-2. Depois, move-se para o filho da direita, se existir.
-3. Por fim, processa o nó e imprime o caractere associado a ele.
+1. O método primeiro visita o filho da esquerda
+2. Depois se move para o filho da direita
+3. Por fim processa o nó e imprime o caractere associado a ele
 
 ---
 
