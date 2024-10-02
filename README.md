@@ -1,5 +1,6 @@
 -----------------------------------------------------------------------------------------------------
-* Começamos defindo os nodes na classe Node que são eles: 
+* Começamos defindo os nodes na classe Node que são eles:
+
 Char caractere
 Node filhoEsquerdo
 Node filho Direito
