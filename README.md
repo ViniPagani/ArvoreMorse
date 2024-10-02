@@ -1,29 +1,36 @@
 -----------------------------------------------------------------------------------------------------
-* Começamos defindo os nodes na classe Node que são eles: 
-Char caractere
-Node filhoEsquerdo
-Node filho Direito
+# Implementação de uma Árvore Morse
 
-Fazemos o contrutor definindo o valor
+### Classe Node
+Começamos definindo os nodes na classe `Node`, que são:
+- `char caractere`
+- `Node filhoEsquerdo`
+- `Node filhoDireito`
+
+No construtor, definimos os valores iniciais:
+```java
 this.caractere = '\0';
 this.filhoEsquerdo = null;
 this.filhoDireito = null;
 
+
 -----------------------------------------------------------------------------------------------------
 
-* Na classe ArvoreMorse definimos um Node chamado raiz
+Classe ArvoreMorse
+Na classe ArvoreMorse, definimos um Node chamado raiz.
 
-------------------------------------------- Metodo Inserir ------------------------------------------
-Fazemos um metodo de inserir onde ele recebe uma String (codigoMorse) e um Char (caractere)
-Inicia o nó raiz como o atual
-Criamos um laço for que verifica cada Char do codigo morse e verifica:
-Se for igual a '.' 
-  Percorre para o nó da esquerda
-  Se o nó da esquerda não existir ele cria um nó novo e define ele como nó atual
-Se for igual a '-' 
-  Percorre para o nó da direita 
-  Se o nó da direita não existir ele cria um nó novo e define ele como nó atual
-Ao final da sequencia do código morse ele atribui o caractere ao nó correspondente 
+Método Inserir
+O método inserir recebe uma String (codigoMorse) e um char (caractere).
+
+Inicia o nó raiz como o atual.
+Criamos um laço for que percorre cada char do código morse e verifica:
+Se for igual a '.':
+Percorre para o nó da esquerda.
+Se o nó da esquerda não existir, ele cria um nó novo e o define como o nó atual.
+Se for igual a '-':
+Percorre para o nó da direita.
+Se o nó da direita não existir, ele cria um nó novo e o define como o nó atual.
+Ao final da sequência do código morse, atribui o caractere ao nó correspondente.
 
 ------------------------------------------- Metodo Buscar --------------------------------------------
 Fazemos um metodo de busca onde ele recebe uma String (codigoMorse)
