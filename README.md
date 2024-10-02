@@ -7,11 +7,11 @@ Começamos definindo os nodes na classe `Node`, que são:
 - `Node filhoDireito`
 
 No construtor, definimos os valores iniciais:
-java
+```java
 this.caractere = '\0';
 this.filhoEsquerdo = null;
 this.filhoDireito = null;
-
+```
 
 ---
 
@@ -68,13 +68,13 @@ O método começa processando o nó atual e imprime o caractere associado a ele.
 ## Classe Main
 
 Na classe `Main`, criamos uma árvore morse chamada `arvoreMorse`. Em seguida, inserimos todas as letras do alfabeto com seus respectivos códigos Morse, por exemplo:
-java
+```java
 arvoreMorse.inserir(".-", 'A');
 arvoreMorse.inserir("-...", 'B');
 arvoreMorse.inserir("-.-.", 'C');
 arvoreMorse.inserir("-..", 'D');
 // ...
-
+```
 
 Após inserir todo o alfabeto, temos um menu com 5 diferentes opções:
 
