@@ -1,4 +1,5 @@
-# Implementação de uma Árvore Morse
+# Implementação Árvore Morse
+## Vinicius Mizuguchi Pagani
 
 ## Classe Node
 Começamos definindo os nodes na classe `Node`, que são:
