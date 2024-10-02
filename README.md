@@ -7,6 +7,8 @@ Node filhoEsquerdo
 
 Node filho Direito
 
+
+
 Fazemos o contrutor definindo o valor
 
 this.caractere = '\0';
@@ -22,15 +24,25 @@ this.filhoDireito = null;
 ------------------------------------------- Metodo Inserir ------------------------------------------
 
 Fazemos um metodo de inserir onde ele recebe uma String (codigoMorse) e um Char (caractere)
+
 Inicia o nó raiz como o atual
+
 Criamos um laço for que verifica cada Char do codigo morse e verifica:
+
 Se for igual a '.' 
+
   Percorre para o nó da esquerda
+  
   Se o nó da esquerda não existir ele cria um nó novo e define ele como nó atual
+  
 Se for igual a '-' 
+
   Percorre para o nó da direita 
+  
   Se o nó da direita não existir ele cria um nó novo e define ele como nó atual
+  
 Ao final da sequencia do código morse ele atribui o caractere ao nó correspondente 
+
 
 ------------------------------------------- Metodo Buscar --------------------------------------------
 
